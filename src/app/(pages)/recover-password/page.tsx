@@ -12,7 +12,7 @@ import { RenderParams } from '../../_components/RenderParams'
 
 export default async function RecoverPassword() {
   return (
-    <section className={classes.RecoverPassword}>
+    <section className={classes.recoverPassword}>
       <div className={classes.heroImg}>
         <Link href='/'>
           <Image

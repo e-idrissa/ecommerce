@@ -19,7 +19,7 @@ export default async function CreateAccount() {
   })
 
   return (
-    <section className={classes.CreateAccount}>
+    <section className={classes.createAccount}>
       <div className={classes.heroImg}>
         <Link href='/'>
           <Image
