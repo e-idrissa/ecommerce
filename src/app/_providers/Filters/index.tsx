@@ -6,7 +6,7 @@ interface IContextType {
   categoryFilters: string[]
   setCategoryFilters: React.Dispatch<React.SetStateAction<string[]>>
   sort: string
-  setSort: React.Dispatch<React.SetStateAction<string[]>>
+  setSort: React.Dispatch<React.SetStateAction<string>>
 }
 
 export const INITIAL_FILTER_DATA = {
@@ -25,7 +25,7 @@ export const FilterProvider = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <FilterContext.Provider
-      values={{
+      value={{
         categoryFilters,
         setCategoryFilters,
         sort,
