@@ -166,27 +166,22 @@ export const CollectionArchive: React.FC<Props> = props => {
   return (
     <div className={[classes.collectionArchive, className].filter(Boolean).join(' ')}>
       <div className={classes.scrollRef} ref={scrollRef} />
-      {!isLoading && error && <Gutter>{error}</Gutter>}
+      {!isLoading && error && <div>{error}</div>}
       <Fragment>
         {showPageRange !== false && populateBy !== 'selection' && (
-          <Gutter>
-            <div className={classes.pageRange}>
-              <PageRange
-                collection={relationTo}
-                currentPage={results.page}
-                limit={limit}
-                totalDocs={results.totalDocs}
-              />
-            </div>
-          </Gutter>
+          <div className={classes.pageRange}>
+            <PageRange
+              collection={relationTo}
+              currentPage={results.page}
+              limit={limit}
+              totalDocs={results.totalDocs}
+            />
+          </div>
         )}
-        <Gutter>
           <div className={classes.grid}>
             {results.docs?.map((result, index) => {
               return (
-                <div className={classes.column} key={index}>
                   <Card doc={result} relationTo={relationTo} showCategories />
-                </div>
               )
             })}
           </div>
@@ -198,7 +193,6 @@ export const CollectionArchive: React.FC<Props> = props => {
               totalPages={results.totalPages}
             />
           )}
-        </Gutter>
       </Fragment>
     </div>
   )
