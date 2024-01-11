@@ -22,8 +22,7 @@ export const CartLink: React.FC<{
   return (
     <Link className={[classes.cartLink, className].filter(Boolean).join(' ')} href="/cart">
       <Fragment>
-        
-        <Image 
+        <Image
           src='assets/icons/cart.svg'
           alt='cart'
           width={24}
