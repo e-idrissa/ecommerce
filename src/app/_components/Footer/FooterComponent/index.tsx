@@ -57,7 +57,7 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
                     newTab={true}
                     className={classes.socialLinkItem}
                   >
-                    <Image 
+                    <Image
                       src={icon?.url}
                       alt={item.link.label}
                       width={24}
